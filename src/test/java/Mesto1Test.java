@@ -63,7 +63,7 @@ public class Mesto1Test {
         given()
                 .auth().oauth2(bearerToken) // Передаём токен для аутентификации
                 .delete("/api/cards/{photoId}/likes", photoId) // Делаем DELETE-запрос
-                .then().assertThat().statusCode(200); // Проверяем, что сервер вернул код 200
+                .then().assertThat().statusCode(201); // Проверяем, что сервер вернул код 200
     }
 
 }
